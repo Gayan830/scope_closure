@@ -24,9 +24,17 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 function recVolume(height) {
-  // Your code here
+  const dimensions = [height];
+  const countVlolume = (dimension) => {
+    if(dimensions.length === 3) {
+      return dimensions.reduce((accu, curr) => accu*curr)
+    } 
+      dimensions.push(dimension);
+      return dimensions.length === 3 ? dimensions.reduce((accu, curr) => accu*curr): countVlolume;
+    
+  }
+  return countVlolume;
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = recVolume;

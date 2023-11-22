@@ -23,7 +23,17 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function lazyAdder(firstNum) {
-  // Your code here
+  let result = firstNum;
+  let currNumber = 1;
+  const adder = (num) => {
+    currNumber++
+    if(currNumber < 3) {
+      result += num;
+      return adder;
+    }
+    return result + num;
+  }
+  return adder;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

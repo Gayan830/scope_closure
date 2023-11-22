@@ -11,7 +11,7 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 const arrowRestSum = (...otherNums) => {
-  // Your code here
+  return otherNums.reduce((accu,num) => accu + num)
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

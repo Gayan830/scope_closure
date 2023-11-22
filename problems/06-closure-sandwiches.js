@@ -17,8 +17,12 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-function sandwichMaker() {
-  // Your code here
+function sandwichMaker(item) {
+  let defaultItem = `One sandwich with tomato`;
+  return (item) => {
+      defaultItem += ` and ${item}`
+      return defaultItem
+  }; 
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
